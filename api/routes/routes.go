@@ -25,6 +25,7 @@ func SetupRoutes(router *gin.Engine) *gin.Engine {
 		transactionsGroup.GET("/:id", transactions.GetTransaction)
 		transactionsGroup.DELETE("/:id", transactions.DeleteTransaction)
 		transactionsGroup.PUT("/:id", transactions.UpdateTransaction)
+		// as ex you can use http://localhost:8088/transactions/filtered?1 to get filtered data with id
 		transactionsGroup.GET("/filtered", transactionviews.GetFilteredTransactionViews)
 	}
 
